@@ -15,8 +15,8 @@ function formSubmitHandler(event) {
   const loginValue = loginEl.value.trim();
   const passwordValue = passwordEl.value.trim();
 
-  console.log('loginValue ===', loginValue);
-  loginEl.value = loginValue;
+  clearError();
+
   // email
   if (checkIfNotEmpty(loginEl)) return;
 
@@ -61,4 +61,11 @@ function checkIfNotLessThen(inputEl) {
     inputEl.className = 'input-error';
     return true;
   }
+}
+
+function clearError() {
+  loginEl.className = '';
+  passwordEl.className = '';
+  loginEl.nextElementSibling.style.display = 'none';
+  passwordEl.nextElementSibling.style.display = 'none';
 }
