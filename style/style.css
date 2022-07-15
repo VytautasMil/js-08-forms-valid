@@ -1,7 +1,11 @@
 @import 'reset.css';
 
-.input-error {
+.under-input-error-msg {
   margin-bottom: 0;
   color: tomato;
   display: none;
+}
+
+.input-error {
+  background-color: rgb(255, 196, 186);
 }
